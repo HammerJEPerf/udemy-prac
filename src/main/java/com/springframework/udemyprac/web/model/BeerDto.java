@@ -1,25 +1,26 @@
 package com.springframework.udemyprac.web.model;
 
-import java.util.UUID;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * 
- * @author joshua.hammer
- * on 02-04-22
- */
+import java.math.BigDecimal;
+import java.time.OffsetDateTime;
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class BeerDto {
-	private UUID id;
-	private String beerName;
-	private String beerStyle;
-	private Long upc;
-
+    private UUID id;
+    private Integer version;
+    private OffsetDateTime createdDate;
+    private OffsetDateTime lastModifiedDate;
+    private String beerName;
+    private BeerStyleEnum beerStyleEnum;
+    private long upc;
+    private BigDecimal price;
+    private Integer quantityOnHand;
 }
