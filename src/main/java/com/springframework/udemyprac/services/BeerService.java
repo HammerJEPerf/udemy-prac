@@ -4,7 +4,10 @@ import com.springframework.udemyprac.web.model.BeerDto;
 
 import java.util.UUID;
 
-public interface BeerService{
+/**
+ * Created by jt on 2019-04-20.
+ */
+public interface BeerService {
     BeerDto getBeerById(UUID beerId);
 
     BeerDto saveNewBeer(BeerDto beerDto);

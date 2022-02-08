@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+/**
+ * Created by jt on 2019-04-20.
+ */
 @Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
@@ -19,7 +22,9 @@ public class BeerServiceImpl implements BeerService {
 
     @Override
     public BeerDto saveNewBeer(BeerDto beerDto) {
-        return BeerDto.builder().id(UUID.randomUUID()).build();
+        return BeerDto.builder()
+                .id(UUID.randomUUID())
+                .build();
     }
 
     @Override
